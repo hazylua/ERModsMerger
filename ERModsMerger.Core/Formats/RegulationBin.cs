@@ -187,8 +187,7 @@ namespace ERModsMerger.Core.Formats
                             // find insertable row index
                             int index = Params[row.ParamKey].Rows.FindIndex(x => x.ID > row.RowID);
 
-                            if (index != -1)
-                                Params[row.ParamKey].Rows.Insert(index, row.Row);
+                            Params[row.ParamKey].Rows.Add(row.Row);
                         }
 
                     }
